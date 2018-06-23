@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Milk Price Comparison</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/default.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Milk Price Comparison</h2>
+  <p>A Shiny App to compare farm gate and retail prices of milk, from different countries!</p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>What is shown</h2>
+  <ul>
+<li>User has the choice between visualizing farm gate or retail price for one
+litre of milk, in Canadian dollars, across time</li>
+<li>According to visualization, you have the choice between various countries, by
+default Canada</li>
+<li>Graph is shown after making choices and submitting the job</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>Origin of the data</h2>
+  <ul>
+<li>USA: USDA-NASS and USDA AMS</li>
+<li>Canada: Québec dairy producers and Statistics Canada</li>
+<li>Europe: DG Agri and Eurostat</li>
+<li>New Zealand: CLAL.it</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>Harmonization</h2>
+  <ul>
+<li>Each country has its way of reporting economic information:
+
+<ul>
+<li>USA: $/cwt for farm gate price; $ for a gallon or half a gallon for retail
+price</li>
+<li>CAN: $/hl for farm gate price; $ for a litre for retail price</li>
+<li>Europe: euros/100 kg for farm gate price; euros per litre for retail price</li>
+<li>New Zealand: dollars per 100 kg for farm gate price</li>
+</ul></li>
+<li>So all measures were harmonized as Canadian dollars per litre</li>
+<li>Also, exchange rate on the first day of the year was used to convert between
+the currencies and Canadian dollars</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>Where to find it?</h2>
+  <p><a href="https://dhaine.shinyapps.io/milkPrice/">https://dhaine.shinyapps.io/milkPrice/</a></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
